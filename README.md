@@ -20,6 +20,7 @@ Install the required Python libraries:
 
 ```bash
 pip install numpy matplotlib scikit-learn scipy plotly
+```
 
 ## Function Signature
 forecast_income(
