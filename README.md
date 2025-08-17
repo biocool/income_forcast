@@ -64,4 +64,42 @@ A dictionary with the following keys:
 }
 ```
 
+## Example Usage
+```python
+import numpy as np
+from forecast_module import forecast_income  # adjust import as needed
 
+# Historical income data for Jan–Jun 2025
+income_history = [3200, 3500, 4000, 4200, 4600, 5000]
+
+# Generate 6-month forecast
+results = forecast_income(
+    income_history, 
+    window_size=3, 
+    forecast_horizon=6
+)
+
+# Print predicted values
+print("Predictions:", results["predictions"])
+print("Forecast months:", results["months"]["forecast"])
+
+# Show interactive Plotly figure
+results["plotly_fig"].show()
+
+# Export Plotly figure as standalone HTML
+results["plotly_fig"].write_html("forecast_plot.html", include_plotlyjs="cdn")
+```
+# Integration Notes
+
+## Embed in a web page:
+
+```python
+html_code = results["plotly_fig"].to_html(full_html=False, include_plotlyjs="cdn")
+# Insert html_code into your web frontend (React, Django, Flask, etc.)
+```
+
+## Standalone HTML report:
+
+```python
+results["plotly_fig"].write_html("forecast.html", include_plotlyjs="cdn")
+```
