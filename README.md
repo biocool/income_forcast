@@ -21,7 +21,7 @@ Install the required Python libraries:
 ```bash
 pip install numpy matplotlib scikit-learn scipy plotly
 
-Function Signature
+## Function Signature
 forecast_income(
     income_history, 
     window_size=3, 
