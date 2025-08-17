@@ -31,3 +31,19 @@ forecast_income(
     start_year=2025, 
     start_month=1
 )
+
+## Parameters
+
+income_history (list[float]): Historical monthly income values. Example: [3200, 3500, 4000]
+
+window_size (int, default=3): Number of past months to use for predicting the next month
+
+forecast_horizon (int, default=6): Number of months to forecast into the future
+
+plot_matplotlib (bool, default=False): If True, shows a static Matplotlib plot
+
+start_year (int, default=2025): Year of the first data point
+
+start_month (int, default=1`): Starting month (1 = January, 12 = December)
+
+
