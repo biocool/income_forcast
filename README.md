@@ -34,7 +34,7 @@ forecast_income(
 
 ## Parameters
 
-income_history (list[float]): Historical monthly income values. Example: [3200, 3500, 4000]
+--**income_history (list[float]): Historical monthly income values. Example: [3200, 3500, 4000]
 
 window_size (int, default=3): Number of past months to use for predicting the next month
 
