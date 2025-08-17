@@ -34,7 +34,7 @@ forecast_income(
 
 ## Parameters
 
---**income_history (list[float]): Historical monthly income values. Example: [3200, 3500, 4000]
+income_history (list[float]): Historical monthly income values. Example: [3200, 3500, 4000]
 
 window_size (int, default=3): Number of past months to use for predicting the next month
 
@@ -45,5 +45,23 @@ plot_matplotlib (bool, default=False): If True, shows a static Matplotlib plot
 start_year (int, default=2025): Year of the first data point
 
 start_month (int, default=1`): Starting month (1 = January, 12 = December)
+
+
+## Returns
+
+A dictionary with the following keys:
+
+```python
+{
+    "predictions": [...],  # list of forecasted income values
+    "lower_bound": [...],  # lower bounds of 95% confidence intervals
+    "upper_bound": [...],  # upper bounds of 95% confidence intervals
+    "months": {
+        "historical": ["Jan 2025", "Feb 2025", ...],
+        "forecast": ["Jul 2025", "Aug 2025", ...]
+    },
+    "plotly_fig": <plotly.graph_objects.Figure>  # interactive figure
+}
+```
 
 
